@@ -2,78 +2,88 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.Login"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Login">
     <ContentPage.Content>
-        <StackLayout
-            Padding="20,20,10,5">
-            <Label
+        <ScrollView>
+            <StackLayout
+            Padding="20,20,10,10">
+                <Label
                 FontAttributes="Bold"
                 FontSize="Large"
                 HorizontalOptions="Center"
                 Text="Lands"></Label>
-            <Image Source="onu.png"
-                WidthRequest="200" />
-            <Grid
-                Margin="0,20">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*" />
-                </Grid.ColumnDefinitions>
-            
-                <Label
-                    FontSize="Large"
+                <Image Source="onu.png"
+                WidthRequest="140" />
+                <Grid
+                Margin="0,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label 
                     Grid.Row="0"
                     Grid.Column="0"
-                    Text="E-mail"/>
-                <Entry 
+                    Text="E-mail"
+                    TextColor="Black"/>
+                    <Entry
                     Grid.Row="0"
                     Grid.Column="1"
                     Keyboard="Email"
                    Placeholder="Enter your Email" />
-                <Label 
-                    FontSize="Large"
+                    <Label 
                     Grid.Row="1"
                     Grid.Column="0"
-                    Text="Password"/>
-                <Entry 
+                    Text="Password"
+                    TextColor="Black"/>
+                    <Entry 
                     Grid.Row="1"
                     Grid.Column="1"
                     IsPassword="True" Placeholder="Enter your password"/>
-            </Grid>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Remember in this device"
+                </Grid>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Remember on this device"
+                       FontSize="Large"
                        HorizontalOptions="StartAndExpand"
                        VerticalOptions="Center"></Label>
-                <Switch HorizontalOptions="End"></Switch>
-            </StackLayout>
-            <StackLayout
+                    <Switch HorizontalOptions="End"></Switch>
+
+                </StackLayout>
+                <Label HorizontalOptions="Center" 
+                       Text="Forgot your Password?"
+                       TextColor="Blue"/>
+                <StackLayout
                 Margin="35,0">
-                <Button
+                    <Button
                 BackgroundColor="DarkCyan"
                 Text="Login"
                 BorderRadius="23"
                 HeightRequest="46"
                 TextColor="White"/>
 
-                <Button
+                    <Button
                 BackgroundColor="MediumPurple"
                 Text="Register"
                 BorderRadius="23"
                 HeightRequest="46"
                 TextColor="White"/>
 
-            </StackLayout>
-            <StackLayout
+                </StackLayout>
+                <StackLayout
+                Margin="0,20"
                 HorizontalOptions="Center"
                 Orientation="Horizontal">
-                <Image Source="Logo_face.png"
+                    <Image Source="Logo_face.png"
                        WidthRequest="80"></Image>
-                <Image Source="Logo_twiter.png"
-                       WidthRequest="100"></Image>
-                <Image Source="Logo_instagram.png"
-                       WidthRequest="100"></Image>
+                    <Image Source="Logo_twiter.png"
+                       WidthRequest="80"></Image>
+                    <Image Source="Logo_instagram.png"
+                       WidthRequest="80"></Image>
+                </StackLayout>
+
             </StackLayout>
-            
-        </StackLayout>
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>
